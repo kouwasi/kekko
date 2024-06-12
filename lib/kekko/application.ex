@@ -11,8 +11,6 @@ defmodule Kekko.Application do
       KekkoWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:kekko, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Kekko.PubSub},
-      # Start the Finch HTTP client for sending emails
-      {Finch, name: Kekko.Finch},
       # Start a worker by calling: Kekko.Worker.start_link(arg)
       # {Kekko.Worker, arg},
       # Start to serve requests, typically the last entry
